@@ -9,8 +9,8 @@ logger = logging.getLogger(__name__)
 
 if __name__ == "__main__" :
     # create download directory, if not exist
-    if not os.path.isdir(Config.DOWNLOAD_LOCATION):
-        os.makedirs(Config.DOWNLOAD_LOCATION)
+    if not os.path.isdir(Config.TECH_VJ_DOWNLOAD_LOCATION):
+        os.makedirs(Config.TECH_VJ_DOWNLOAD_LOCATION)
     plugins = dict(root="plugins")
     VJ = Tech_VJ("@VJ_BOTZ",
     bot_token=Config.TECH_VJ_BOT_TOKEN,
