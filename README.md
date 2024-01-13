@@ -14,7 +14,8 @@
  
 - [x] Upload [YT-DLP Supported Links](https://telegram.me/VJCode/4) to Telegram.
 - [x] Upload HTTP/HTTPS as File/Video to Telegram.
-- [x] Upload zee5, sony.live, voot and much more.
+- [x] Upload YouTube & Google Drive Link and much more..
+- [x] Upload zee5, sony.live, voot and much more..
 - [x] Permanent thumbnail Support.
 - [x] Broadcast & Force Subscribe Feature Added
 - [x] Token Verification Feature Added [ Premium Feature] 
