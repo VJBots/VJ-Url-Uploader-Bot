@@ -12,10 +12,17 @@
 
 <b><details><summary>Tap On Me For Bot Features</summary>
  
-- [x] 
+- [x] Upload [YT-DLP Supported Links](https://telegram.me/VJCode/4) to Telegram.
+- [x] Upload HTTP/HTTPS as File/Video to Telegram.
+- [x] Upload zee5, sony.live, voot and much more.
+- [x] Permanent thumbnail Support.
 - [x] Broadcast & Force Subscribe Feature Added
 - [x] Token Verification Feature Added [ Premium Feature] 
 - [x] Custom Start Message With Picture And Buttons
+
+Heroku BuildPack :-
+- `https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest`
+
 </b>
 </details>
 
