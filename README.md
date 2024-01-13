@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://graph.org/file/d57d6f83abb6b8d0efb02.jpg" alt="VJ-FILE-STORE-BOT Logo">
+  <img src="https://graph.org/file/d57d6f83abb6b8d0efb02.jpg" alt="VJ-URL-UPLOADER-BOT Logo">
 </p>
 <h1 align="center">
-  VJ FILE STORE BOT
+  VJ URL UPLOADER BOT
 </h1>
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+VJ-URL-UPLOADER-BOT;A+Highly+Advance+Url+Uploader+Bot;Made+By+Yt-@Tech_VJ!;With+Token+Verification+Feature;Broadcast+Force+Subscribe+Feature;A+Bot+With+Fully+Advanced+Feature!;Must+Give+Credit+To+Tech+VJ;Thank+You!)
