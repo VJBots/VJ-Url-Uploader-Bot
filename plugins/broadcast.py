@@ -46,7 +46,7 @@ async def broadcast_(c, m):
         text = f"Broadcast initiated! You will be notified with log file when all the users are notified."
     )
     start_time = time.time()
-    total_users = await clinton.total_users_count()
+    total_users = await techvj.total_users_count()
     done = 0
     failed = 0
     success = 0
