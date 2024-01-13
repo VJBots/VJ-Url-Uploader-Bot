@@ -21,8 +21,6 @@
 - [x] Token Verification Feature Added [ Premium Feature] 
 - [x] Custom Start Message With Picture And Buttons
 
-Heroku BuildPack :-
-- `https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest`
 
 </b>
 </details>
@@ -43,6 +41,10 @@ Heroku BuildPack :-
 - `TECH_VJ_URL` : Your Shortner Domain Url Without https://
 - `TECH_VJ_API` : Your Shortner Api
 - `TECH_VJ_TUTORIAL` : Your How To Open Link of Shortner
+
+Heroku BuildPack :-
+- `https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest`
+
 </b>
 </details>
 
