@@ -49,7 +49,7 @@ Heroku BuildPack :-
 
 <details><summary>Tap On Me For See Credit</summary>
 
-💝 Credit Goes To [Clinton Abraham](https://telegram.me/Kingvj01) For Repository.
+💝 Credit Goes To [Clinton Abraham]((https://github.com/Clinton-Abraham) For Repository.
 
 🖍️ The Token Verification System & Force Subscribe Is Added By [Tech VJ](https://telegram.me/Kingvj01) So Don't Forgot To Give Credit
 
