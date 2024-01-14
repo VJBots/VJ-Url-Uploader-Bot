@@ -5,8 +5,13 @@
   VJ URL UPLOADER BOT
 </h1>
 
+
+
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+VJ-URL-UPLOADER-BOT;A+Highly+Advance+Url+Uploader+Bot;Made+By+Yt-@Tech_VJ!;With+Token+Verification+Feature;Broadcast+Force+Subscribe+Feature;A+Bot+With+Fully+Advanced+Feature!;Must+Give+Credit+To+Tech+VJ;Thank+You!)
 </p>
+
+<b>[Deploy Tutorial Video](https://youtu.be/_H8xBeBx_io)</b>
+
 
 ## Features
 
