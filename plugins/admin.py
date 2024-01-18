@@ -3,7 +3,7 @@
 # Ask Doubt on telegram @KingVJ01
 
 from pyrogram import Client as Tech_VJ
-from pyrogram import filters
+from pyrogram import filters, enums
 from config import Config
 from database.access import techvj
 from plugins.buttons import *
@@ -20,4 +20,4 @@ async def sts(c, m):
 async def serc(bot, update):
 
       await bot.send_message(chat_id=update.chat.id, text="🔍 TORRENT SEARCH", 
-      parse_mode="html", reply_markup=Button.BUTTONS01)
+      parse_mode=enums.ParseMode.HTML, reply_markup=Button.BUTTONS01)
