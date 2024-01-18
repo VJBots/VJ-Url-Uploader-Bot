@@ -14,6 +14,7 @@ from datetime import datetime
 from database.access import techvj
 from translation import Translation
 from plugins.custom_thumbnail import *
+from pyrogram import enums
 from pyrogram.types import InputMediaPhoto
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 
@@ -115,12 +116,12 @@ async def youtube_dl_call_back(bot, update):
     t_response = stdout.decode().strip()
     if e_response:
         await bot.edit_message_text(chat_id=update.message.chat.id,
-        message_id=update.message.message_id, text="**ERROR : Download failed ⚠️**")
+        message_id=update.message.id, text="**ERROR : Download failed ⚠️**")
         return
     if not t_response:
         asyncio.create_task(clendir(tmp_directory_for_each_user))
         await bot.edit_message_text(chat_id=update.message.chat.id,
-        text="ERROR : File not found 😑", message_id=update.message.message_id)
+        text="ERROR : File not found 😑", message_id=update.message.id)
         return
     file_size, file_location = await get_flocation(download_directory, youtube_dl_ext)
     if file_size == 0:
@@ -137,10 +138,10 @@ async def youtube_dl_call_back(bot, update):
             chat_id=update.message.chat.id,
             audio=file_location,
             caption=description,
-            parse_mode="HTML",
+            parse_mode=enums.ParseMode.HTML,
             duration=duration,
             thumb=thumbnail,
-            reply_to_message_id=update.message.reply_to_message.message_id,
+            reply_to_message_id=update.message.reply_to_message.id,
             progress=progress_for_pyrogram,
             progress_args=(Translation.TECH_VJ_UPLOAD_START, update.message, start_time))
         elif tg_send_type == "file":
@@ -149,8 +150,8 @@ async def youtube_dl_call_back(bot, update):
             document=file_location,
             thumb=thumbnail,
             caption=description,
-            parse_mode="HTML",
-            reply_to_message_id=update.message.reply_to_message.message_id,
+            parse_mode=enums.ParseMode.HTML,
+            reply_to_message_id=update.message.reply_to_message.id,
             progress=progress_for_pyrogram,
             progress_args=(Translation.TECH_VJ_UPLOAD_START, update.message, start_time))
         elif tg_send_type == "vm":
@@ -161,7 +162,7 @@ async def youtube_dl_call_back(bot, update):
             duration=duration,
             length=width,
             thumb=thumb_image_path,
-            reply_to_message_id=update.message.reply_to_message.message_id,
+            reply_to_message_id=update.message.reply_to_message.id,
             progress=progress_for_pyrogram,
             progress_args=(Translation.TECH_VJ_UPLOAD_START, update.message, start_time))
         elif tg_send_type == "video":
@@ -176,7 +177,7 @@ async def youtube_dl_call_back(bot, update):
             height=height,
             thumb=thumbnail,
             supports_streaming=True,
-            reply_to_message_id=update.message.reply_to_message.message_id,
+            reply_to_message_id=update.message.reply_to_message.id,
             progress=progress_for_pyrogram,
             progress_args=(Translation.TECH_VJ_UPLOAD_START,
             update.message, start_time) )
@@ -187,7 +188,7 @@ async def youtube_dl_call_back(bot, update):
             thumb=thumbnail,
             caption=description,
             parse_mode="HTML",
-            reply_to_message_id=update.message.reply_to_message.message_id,
+            reply_to_message_id=update.message.reply_to_message.id,
             progress=progress_for_pyrogram,
             progress_args=(Translation.TECH_VJ_UPLOAD_START, update.message, start_time))
 
@@ -196,12 +197,12 @@ async def youtube_dl_call_back(bot, update):
         await bot.edit_message_text(
         text="<b>ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ✔️\n\nᴊᴏɪɴ @VJ_BOTZ</b>",
         chat_id=update.message.chat.id,
-        message_id=update.message.message_id,
+        message_id=update.message.id,
         disable_web_page_preview=True)
     except Exception as e:
         asyncio.create_task(clendir(download_directory))
         await bot.edit_message_text(text=Translation.TECH_VJ_ERROR.format(e),
-        chat_id=update.message.chat.id, message_id=update.message.message_id)
+        chat_id=update.message.chat.id, message_id=update.message.id)
 
 #=================================
 
