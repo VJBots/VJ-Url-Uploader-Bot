@@ -8,7 +8,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
 
 from config import Config
-from pyrogram import filters
+from pyrogram import filters, enums
 from database.access import techvj
 from translation import Translation
 from database.adduser import AddUser
@@ -36,7 +36,7 @@ async def echo(bot, update):
         )
         return
     await AddUser(bot, update)
-    imog = await update.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴅᴇᴀʀ...⚡**", reply_to_message_id=update.message_id)
+    imog = await update.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴅᴇᴀʀ...⚡**", reply_to_message_id=update.id)
     youtube_dl_username = None
     youtube_dl_password = None
     file_name = None
@@ -114,8 +114,8 @@ async def echo(bot, update):
             error_message = "sᴀɪᴅ ɪɴᴠᴀʟɪᴅ ᴜʀʟ 🚸</code>"
         await bot.send_message(chat_id=update.chat.id,
         text=Translation.TECH_VJ_NO_VOID_FORMAT_FOUND.format(str(error_message)),
-        disable_web_page_preview=True, parse_mode="html",
-        reply_to_message_id=update.message_id)
+        disable_web_page_preview=True, parse_mode=enums.ParseMode.HTML,
+        reply_to_message_id=update.id)
         await imog.delete(True)
         return False
     if t_response:
@@ -236,8 +236,8 @@ async def echo(bot, update):
             chat_id=update.chat.id,
             text=Translation.TECH_VJ_FORMAT_SELECTION + "\n" + Translation.TECH_VJ_SET_CUSTOM_USERNAME_PASSWORD,
             reply_markup=reply_markup,
-            parse_mode="html",
-            reply_to_message_id=update.message_id
+            parse_mode=enums.ParseMode.HTML,
+            reply_to_message_id=update.id
         )
     else:
         inline_keyboard = []
@@ -261,5 +261,5 @@ async def echo(bot, update):
         chat_id=update.chat.id,
         text=Translation.TECH_VJ_FORMAT_SELECTION,
         reply_markup=reply_markup,
-        parse_mode="html",
-        reply_to_message_id=update.message_id)
+        parse_mode=enums.ParseMode.HTML,
+        reply_to_message_id=update.id)
