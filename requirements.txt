@@ -10,7 +10,7 @@ aiofiles
 dnspython
 motor[srv]
 beautifulsoup4
-pyrogram==1.4.16 
+pyrogram
 datetime 
 pytz 
 requests 
