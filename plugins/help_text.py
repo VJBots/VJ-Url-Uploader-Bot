@@ -14,7 +14,7 @@ from config import Config
 # the Strings used for this "thing"
 from translation import Translation
 from utils import verify_user, check_token
-from pyrogram import filters
+from pyrogram import filters, enums
 from database.adduser import AddUser
 from plugins.forcesub import handle_force_sub
 from pyrogram import Client as Tech_VJ
@@ -31,9 +31,9 @@ async def help_user(bot, update):
         chat_id=update.chat.id,
         text=Translation.TECH_VJ_HELP_TEXT,
         reply_markup=Translation.TECH_VJ_HELP_BUTTONS,
-        parse_mode="html",
+        parse_mode=enums.ParseMode.HTML,
         disable_web_page_preview=True,
-        reply_to_message_id=update.message_id
+        reply_to_message_id=update.id
     )
 
 
@@ -51,7 +51,7 @@ async def start(bot, update):
             chat_id=update.chat.id,
             text=Translation.TECH_VJ_START_TEXT.format(update.from_user.mention),
             reply_markup=Translation.TECH_VJ_START_BUTTONS,
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.id
         )
         return
     data = update.command[1]
