@@ -171,7 +171,7 @@ async def youtube_dl_call_back(bot, update):
             await bot.send_video(chat_id=update.message.chat.id,
             video=file_location,
             caption=description,
-            parse_mode="HTML",
+            parse_mode=enums.ParseMode.HTML,
             duration=duration,
             width=width,
             height=height,
@@ -187,7 +187,7 @@ async def youtube_dl_call_back(bot, update):
             document=file_location,
             thumb=thumbnail,
             caption=description,
-            parse_mode="HTML",
+            parse_mode=enums.ParseMode.HTML,
             reply_to_message_id=update.message.reply_to_message.id,
             progress=progress_for_pyrogram,
             progress_args=(Translation.TECH_VJ_UPLOAD_START, update.message, start_time))
